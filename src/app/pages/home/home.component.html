@@ -1,0 +1,14 @@
+<div class="lading-page">
+  <h2>curtidas:{{ like }}</h2>
+  <div class="container">
+    <div *ngFor="let card of cards">
+      <app-card
+        (likeEvent)="curtir($event)"
+        [Titulo]="card.Titulo"
+        [subTitulo]="card.subTitulo"
+        [foto]="card.foto"
+      >
+      </app-card>
+    </div>
+  </div>
+</div>
